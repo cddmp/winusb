@@ -1,7 +1,7 @@
 #!/bin/bash
 
-device="$1"
-iso="$2"
+iso="$1"
+device="$2"
 requirements="sfdisk ntfslabel mkfs.ntfs grub-install rsync"
 
 function is_mounted()
@@ -87,7 +87,7 @@ function install_grub
 }
 
 if [[ $# -ne 2 ]]; then
-	echo "Usage: $0 device iso"
+	echo "Usage: $0 iso device"
 	exit 1
 fi
 
